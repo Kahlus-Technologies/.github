@@ -54,7 +54,7 @@ Can past EEG predict future EEG in people the model has never seen? This work te
 <br><br>
 <b>Limit.</b> The remaining claim is the evaluation protocol that caught the error. It is not a forecasting-skill claim.
 <br><br>
-<a href="https://github.com/Kahlus-Technologies/Kahlus-V1#the-headline-result">Results</a> &nbsp;·&nbsp; <a href="https://kahlus.com/research">Paper (accepted, IECBES 2026)</a>
+<a href="https://github.com/Kahlus-Technologies/Kahlus-V1#the-headline-result">Results</a> &nbsp;·&nbsp; <a href="https://kahlus.com/research">Paper (IECBES 2026)</a>
 </td>
 </tr>
 </table>
@@ -98,7 +98,7 @@ We report nulls and retractions. Kahlus-V1 lost to simple baselines, and its REA
 <tr>
 <td>
 <b>Leakage-Controlled Evaluation of EEG Future-Window Forecasting in Held-Out Subjects</b><br>
-<sub>Accepted. IEEE-EMBS IECBES 2026, Kuala Lumpur. Full conference paper, to be presented 9 to 11 December 2026. A. Patel, S. Zaidi, K. Garg.</sub>
+<sub>Published. IEEE-EMBS IECBES 2026, Kuala Lumpur. Full conference paper, to be presented 9 to 11 December 2026. A. Patel, S. Zaidi, K. Garg.</sub>
 </td>
 </tr>
 <tr>
@@ -115,7 +115,7 @@ We report nulls and retractions. Kahlus-V1 lost to simple baselines, and its REA
 </tr>
 </table>
 
-<sub>"Accepted" means the venue accepted the work. Nothing here is called published until it appears in a proceedings index. <a href="https://kahlus.com/research">Full list</a></sub>
+<sub>"Accepted" means the venue accepted the work. "Presented" means it was given. <a href="https://kahlus.com/research">Full list</a></sub>
 
 <br>
 

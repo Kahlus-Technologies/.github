@@ -27,19 +27,18 @@ All repo paths are in Kahlus-Technologies public repos at the commit seen on 202
 | 40 °C thermal cutoff, hardware e-stop outside the software | kahlus.com /plasma "Thermal cutoff and e-stop" |
 | Arm is PAROL6 by Source Robotics; Kahlus built board, sensing, planning, software | kahlus.com /plasma "What Kahlus made" |
 | No treatment effect evaluated; not cleared for clinical use | kahlus.com /plasma "Use and evidence" |
-| IECBES 2026: accepted, 9 to 11 Dec 2026, Kuala Lumpur, authors Patel, Zaidi, Garg | kahlus.com /research item 2; Kahlus-V1 `docs/paper/iecbes2026/` |
+| IECBES 2026: published (captain standing instruction, 2026-11-18: accepted 18 Sep, final manuscript submitted), presented 9 to 11 Dec 2026, Kuala Lumpur, authors Patel, Zaidi, Garg | captain instruction; kahlus.com /research item 2 (lists it as accepted); Kahlus-V1 `docs/paper/iecbes2026/` |
 | IMECE 2026: accepted, abstract only, Vancouver | kahlus.com /research item 5 |
 | ISEC 2026: presented 14 Mar 2026, Princeton, extended abstract and poster, sole author | kahlus.com /research item 10 |
-| "Nothing is called published until it is in a proceedings index" | kahlus.com /research footer note |
 | kahlus-bench, neuroforecast, kahlus-research, kahlus-skills, Subvox, Sotto, mentra-eeg-miniapp, hil-failure-modes descriptions | each repo's own README and GitHub description |
 | mentra-eeg-miniapp signal is synthetic | its README "Status" section |
 | hil-failure-modes bench runs not done yet | its README "Test status" |
 
 ## Needs a captain decision
 
-1. **IECBES is accepted, not published.** The brief said "published". kahlus.com says accepted, to be presented 9 to 11 Dec 2026, and says nothing is "published" until it is in a proceedings index. The draft says "accepted". Public repo files do not state a publication either.
+1. **IECBES is written as "published"** per the captain's standing instruction. kahlus.com still lists it as "Accepted" and says nothing is "published" until it is in a proceedings index. The site and the page now disagree until the site is updated.
 2. **Paper title.** The site title is "Leakage-Controlled Evaluation of EEG Future-Window Forecasting in Held-Out Subjects". The Kahlus-V1 draft file (V7.2) has an older title ("Developing an Evidence-Gated Framework for Leakage-Controlled EEG Forecasting"). The draft uses the site title.
-3. **Homing-Rocketry is left out.** Its README title is "MANPADS Rocket & Launcher Prototype". It does not fit a research-lab page. Say if you want it listed anyway.
+3. **Homing-Rocketry is left out** (captain confirmed).
 4. **Also left out:** sotto-empty (the repo is empty) and subvox-dictate (a fork of the Hex dictation app).
 5. **"Non-commercial" is not on the page.** kahlus.com shows a price target ($6,000 to $8,000) and a "Work with us" page, so the draft does not say non-commercial.
 6. **The K7 figure lives on the unmerged branch `fm/kahlus-figures` of Kahlus-V2.** The PNGs in `profile/assets/` are copies. The figure text is small on a phone. A regenerated, narrower version is possible with `scripts/figures/make_figures.py` on that branch.
@@ -49,7 +48,7 @@ All repo paths are in Kahlus-Technologies public repos at the commit seen on 202
 
 - **Description:** Robotic cold-plasma and closed-loop neurotechnology research. Preregistered tests, sealed held-out data, and results published as they come, including the ones that went against us.
 - **Website:** https://kahlus.com
-- **Location:** not stated on kahlus.com. The plasma lab is at San Jose State University, so "San Jose, California" is a candidate. Needs the captain's answer.
+- **Location:** left blank until the captain gives one.
 
 ## Proposed pinned repositories (web UI, 6)
 
