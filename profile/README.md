@@ -1,55 +1,161 @@
 <div align="center">
 
-<a href="https://github.com/Kahlus-Technologies">
-  <img src="https://avatars.githubusercontent.com/u/304655622?s=460" alt="Kahlus Technologies" width="320" />
-</a>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Kahlus-Technologies/.github/fm/kahlus-org-page/profile/assets/banner-dark.svg">
+  <img src="https://raw.githubusercontent.com/Kahlus-Technologies/.github/fm/kahlus-org-page/profile/assets/banner-light.svg" alt="Kahlus Technologies" width="100%">
+</picture>
 
-<p><strong>Closed-loop intelligence for sustainable focus.</strong></p>
+<br>
 
-Kahlus is researching personalized neurotechnology designed to sense cognitive strain, model how a user's state changes, and study the transition toward recovery.
+**Research in robotic cold plasma and closed-loop neurotechnology.**<br>
+We publish our methods, our code and the results that went against us.
+
+<br>
+
+[Website](https://kahlus.com) &nbsp;·&nbsp; [Plasma system](https://kahlus.com/plasma) &nbsp;·&nbsp; [Papers and talks](https://kahlus.com/research)
 
 </div>
 
----
+<br>
 
-## Why we're building this
+## Research
 
-Cognitive overload is often noticed late — after focus, motivation, or emotional regulation has already started to slip. Many consumer wearables emphasize physiological signals such as heart rate and sleep, which provide useful context about the body's state.
+<table>
+<tr>
+<td width="150" align="center" valign="middle">
+<h3>5.01×</h3>
+<sub>trigger timing<br>SHHS-1</sub>
+</td>
+<td valign="top">
+<h3><a href="https://github.com/Kahlus-Technologies/Kahlus-V2">Kahlus-V2</a>: closed-loop sleep stimulation</h3>
+Closed-loop sound stimulation can deepen slow-wave sleep, but a click just before a brief wake-up (an arousal) can wake the sleeper. This work replays a slow-wave click trigger on recorded nights and asks whether it fires right before scored arousals.
+<br><br>
+On 5,768 SHHS-1 nights, the trigger fires before an arousal 5.01 times as often as at matched moments from the same night (95% interval 4.83 to 5.18). On 2,031 sealed MESA nights, scored once, the ratio is 3.79. A fake trigger shifted in time gives about 1.0 in both.
+<br><br>
+<b>Limit.</b> This is a replay. No sound was played, so the result says nothing about what clicks do to sleep. It measures timing.
+<br><br>
+<a href="https://github.com/Kahlus-Technologies/Kahlus-V2/blob/main/docs/prereg/k1-k7.md">Preregistration</a> &nbsp;·&nbsp; <a href="https://github.com/Kahlus-Technologies/Kahlus-V2/releases/tag/v0.2-k7">Release v0.2-k7</a>
+</td>
+</tr>
+</table>
 
-Kahlus is researching a more integrated sensing-and-response approach. We are building toward a system that brings together EEG, HRV, and physiological sensing with neural-state forecasting and safety-constrained taVNS research — aiming to estimate when cognitive load is building and to study, under strict safety constraints, how the nervous system might be supported toward recovery.
+<div align="center">
 
-## Sense · Understand · Recover
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Kahlus-Technologies/.github/fm/kahlus-org-page/profile/assets/k7-trigger-timing-dark.png">
+  <img src="https://raw.githubusercontent.com/Kahlus-Technologies/.github/fm/kahlus-org-page/profile/assets/k7-trigger-timing-light.png" alt="Relative risk of a brief wake-up within 3 seconds of a click trigger: 5.01 in SHHS-1 and 3.79 in sealed MESA. A time-shifted fake trigger gives 0.99 and 1.00." width="760">
+</picture>
 
-**Sense** — Researching how EEG, HRV, and device telemetry can contribute to a personalized baseline.
+</div>
 
-**Understand** — Developing models intended to estimate and forecast patterns associated with cognitive fatigue, hyperarousal, and overstimulation.
+<table>
+<tr>
+<td width="150" align="center" valign="middle">
+<h3>0.972</h3>
+<sub>score we<br>retracted</sub>
+</td>
+<td valign="top">
+<h3><a href="https://github.com/Kahlus-Technologies/Kahlus-V1">Kahlus-V1</a>: EEG forecasting under leakage control</h3>
+Can past EEG predict future EEG in people the model has never seen? This work tests that with split rules fixed before any training.
+<br><br>
+An early forecast score (Pearson r = 0.972) came from input and target windows that share almost all their samples. We retracted it. On strictly future samples and held-out subjects, the recurrent model did not beat a linear ridge baseline.
+<br><br>
+<b>Limit.</b> The remaining claim is the evaluation protocol that caught the error. It is not a forecasting-skill claim.
+<br><br>
+<a href="https://github.com/Kahlus-Technologies/Kahlus-V1#the-headline-result">Results</a> &nbsp;·&nbsp; <a href="https://kahlus.com/research">Paper (accepted, IECBES 2026)</a>
+</td>
+</tr>
+<tr>
+<td width="150" align="center" valign="middle">
+<h3>&lt;0.1&nbsp;mm</h3>
+<sub>bench position<br>error</sub>
+</td>
+<td valign="top">
+<h3><a href="https://kahlus.com/plasma">Robotic cold plasma</a>: a six-axis research prototype</h3>
+A robot arm holds a cold-plasma torch at a set distance over curved surfaces, follows a planned path and logs every move. The arm is the open-source PAROL6 by Source Robotics. Kahlus built the control board, sensing, path planning and software.
+<br><br>
+Position error stayed under 0.1 mm across 50 commanded bench points. A thermal array cuts the discharge at 40 °C, and a hardware e-stop works outside the control software.
+<br><br>
+<b>Limit.</b> This is a research prototype. No treatment effect has been evaluated, and it is not cleared for clinical use.
+<br><br>
+<a href="https://kahlus.com/plasma">Plasma system</a>
+</td>
+</tr>
+</table>
 
-**Recover** — Designing bounded, user-confirmed intervention research that can evaluate and learn from physiological response.
+<br>
 
-## Target architecture
+## How we work
 
-This is the target architecture — the closed loop we are working toward:
+<table>
+<tr>
+<td width="200" valign="top">Preregistered tests</td>
+<td valign="top">We write down the question, the setting and the pass rule before the run. The preregistration file gets a SHA-256 hash, and every result file records it.</td>
+</tr>
+<tr>
+<td valign="top">Sealed held-out data</td>
+<td valign="top">A held-out cohort stays closed until the plan is frozen. It is then scored once. A guard in the code enforces the seal.</td>
+</tr>
+<tr>
+<td valign="top">Leakage control</td>
+<td valign="top">Features end at the prediction time. Every gain is compared with a time-shifted copy of the same features. If the copy gains too, the model learned the person and not the signal.</td>
+</tr>
+<tr>
+<td valign="top">Results that went against us</td>
+<td valign="top">We report nulls and retractions. Kahlus-V1 lost to simple baselines, and its README says so at the top.</td>
+</tr>
+</table>
 
-`EEG + physiology → signal quality → neural-state model → forecast → safety gates → user confirmation → intervention → response learning`
+<br>
 
-AI is intended to support interpretation, personalization, and workflow coordination. Any stimulation would only proceed through deterministic safety checks and embedded controls that govern eligibility and enforce hardware limits — an unconstrained language model never controls stimulation directly.
+## Papers and talks
 
-## Neural Field Compiler
+<table>
+<tr>
+<td width="110" valign="top">Accepted</td>
+<td valign="top"><b>Leakage-Controlled Evaluation of EEG Future-Window Forecasting in Held-Out Subjects</b><br>
+<sub>IEEE-EMBS IECBES 2026, Kuala Lumpur. Full conference paper, to be presented 9 to 11 December 2026. A. Patel, S. Zaidi, K. Garg.</sub></td>
+</tr>
+<tr>
+<td valign="top">Accepted</td>
+<td valign="top"><b>A Geometry-Aware Robotic Dosimetry Platform for Autonomous Cold Plasma Wound Therapy With Multimodal Closed-Loop Sensing</b><br>
+<sub>ASME IMECE 2026, Vancouver. Technical presentation, abstract only. A. Patel, S. Zaidi.</sub></td>
+</tr>
+<tr>
+<td valign="top">Presented</td>
+<td valign="top"><b>Development of a Six-Degree-of-Freedom Robotic Platform for Automated DBD Plasma Wound Treatment</b><br>
+<sub>IEEE ISEC 2026, Princeton, 14 March 2026. Two-page extended abstract and poster. A. Patel.</sub></td>
+</tr>
+</table>
 
-The Neural Field Compiler is Kahlus's research-derived modeling approach. It treats EEG channels and physiological biomarkers as partial observations of an evolving latent neural state, rather than as isolated readings — a foundation for studying how that state changes over time and how it might respond to intervention.
+<sub>"Accepted" means the venue accepted the work. Nothing here is called published until it appears in a proceedings index. <a href="https://kahlus.com/research">Full list</a></sub>
 
-## Engineering stack
+<br>
 
-**Current core**
+## Open source
 
-`Python` · `PyTorch` · `MNE` · `NumPy` · `SciPy` · `FastAPI` · `React` · `TypeScript` · `Docker` · `CUDA` · `GitHub Actions` · `LangChain` · `MCP`
+**Research software**
 
-**Platform direction — being evaluated**
+- [kahlus-bench](https://github.com/Kahlus-Technologies/kahlus-bench): a leakage-sealed benchmark that scores neural-coupling estimators on synthetic systems with known directed information.
+- [neuroforecast](https://github.com/Kahlus-Technologies/neuroforecast): directed-information graphs for multi-organ neural coupling, with a certified detection floor for each edge.
+- [kahlus-research](https://github.com/Kahlus-Technologies/kahlus-research): deterministic replay of public biosignal recordings with injected faults. Actuation is disabled.
 
-`Qwen` · `Alibaba Cloud` · `AMD ROCm`
+**Agent skills**
 
-## Research & safety
+- [kahlus-skills](https://github.com/Kahlus-Technologies/kahlus-skills): five skills for research repo style, publication figures and removing AI tells from prose. They work with Claude Code, Codex and Jcode.
 
-Kahlus is in active research and prototyping. Any human-use stimulation capability requires engineering validation, informed consent, safety review, and applicable regulatory review before deployment.
+**Side projects**
 
-If you're a researcher, neurotechnology engineer, embedded-systems builder, or aligned collaborator, **[follow the organization](https://github.com/Kahlus-Technologies)** to see our public work as it opens up.
+- [Subvox](https://github.com/Kahlus-Technologies/subvox): tests whether AirPods head motion can carry silently mouthed words (macOS).
+- [Sotto](https://github.com/Kahlus-Technologies/sotto): a hackathon project that steers coding agents with whispers and head gestures.
+- [mentra-eeg-miniapp](https://github.com/Kahlus-Technologies/mentra-eeg-miniapp): an EEG state readout on MentraOS glasses. The demo signal is synthetic.
+- [hil-failure-modes](https://github.com/Kahlus-Technologies/hil-failure-modes): six hardware-in-the-loop test plans for embedded failures. Bench runs come next.
+
+<br>
+
+<div align="center">
+
+<a href="https://kahlus.com">kahlus.com</a><br>
+<sub>Nothing here is cleared for clinical use.</sub>
+
+</div>
