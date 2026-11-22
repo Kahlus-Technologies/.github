@@ -22,15 +22,11 @@ We publish our methods, our code and the results that went against us.
 
 <table>
 <tr>
-<td width="150" align="center" valign="middle">
-<h3>5.01×</h3>
-<sub>trigger timing<br>SHHS-1</sub>
-</td>
-<td valign="top">
+<td>
 <h3><a href="https://github.com/Kahlus-Technologies/Kahlus-V2">Kahlus-V2</a>: closed-loop sleep stimulation</h3>
 Closed-loop sound stimulation can deepen slow-wave sleep, but a click just before a brief wake-up (an arousal) can wake the sleeper. This work replays a slow-wave click trigger on recorded nights and asks whether it fires right before scored arousals.
 <br><br>
-On 5,768 SHHS-1 nights, the trigger fires before an arousal 5.01 times as often as at matched moments from the same night (95% interval 4.83 to 5.18). On 2,031 sealed MESA nights, scored once, the ratio is 3.79. A fake trigger shifted in time gives about 1.0 in both.
+<b>Result.</b> On 5,768 SHHS-1 nights, the trigger fires before an arousal <b>5.01 times</b> as often as at matched moments from the same night (95% interval 4.83 to 5.18). On 2,031 sealed MESA nights, scored once, the ratio is 3.79. A fake trigger shifted in time gives about 1.0 in both.
 <br><br>
 <b>Limit.</b> This is a replay. No sound was played, so the result says nothing about what clicks do to sleep. It measures timing.
 <br><br>
@@ -50,31 +46,26 @@ On 5,768 SHHS-1 nights, the trigger fires before an arousal 5.01 times as often 
 
 <table>
 <tr>
-<td width="150" align="center" valign="middle">
-<h3>0.972</h3>
-<sub>score we<br>retracted</sub>
-</td>
-<td valign="top">
+<td>
 <h3><a href="https://github.com/Kahlus-Technologies/Kahlus-V1">Kahlus-V1</a>: EEG forecasting under leakage control</h3>
 Can past EEG predict future EEG in people the model has never seen? This work tests that with split rules fixed before any training.
 <br><br>
-An early forecast score (Pearson r = 0.972) came from input and target windows that share almost all their samples. We retracted it. On strictly future samples and held-out subjects, the recurrent model did not beat a linear ridge baseline.
+<b>Result.</b> An early forecast score (Pearson r = 0.972) came from input and target windows that share almost all their samples. We retracted it. On strictly future samples and held-out subjects, the recurrent model did not beat a linear ridge baseline.
 <br><br>
 <b>Limit.</b> The remaining claim is the evaluation protocol that caught the error. It is not a forecasting-skill claim.
 <br><br>
 <a href="https://github.com/Kahlus-Technologies/Kahlus-V1#the-headline-result">Results</a> &nbsp;·&nbsp; <a href="https://kahlus.com/research">Paper (accepted, IECBES 2026)</a>
 </td>
 </tr>
+</table>
+
+<table>
 <tr>
-<td width="150" align="center" valign="middle">
-<h3>&lt;0.1&nbsp;mm</h3>
-<sub>bench position<br>error</sub>
-</td>
-<td valign="top">
+<td>
 <h3><a href="https://kahlus.com/plasma">Robotic cold plasma</a>: a six-axis research prototype</h3>
 A robot arm holds a cold-plasma torch at a set distance over curved surfaces, follows a planned path and logs every move. The arm is the open-source PAROL6 by Source Robotics. Kahlus built the control board, sensing, path planning and software.
 <br><br>
-Position error stayed under 0.1 mm across 50 commanded bench points. A thermal array cuts the discharge at 40 °C, and a hardware e-stop works outside the control software.
+<b>Result.</b> Position error stayed under <b>0.1 mm</b> across 50 commanded bench points. A thermal array cuts the discharge at 40 °C, and a hardware e-stop works outside the control software.
 <br><br>
 <b>Limit.</b> This is a research prototype. No treatment effect has been evaluated, and it is not cleared for clinical use.
 <br><br>
@@ -87,24 +78,17 @@ Position error stayed under 0.1 mm across 50 commanded bench points. A thermal a
 
 ## How we work
 
-<table>
-<tr>
-<td width="200" valign="top">Preregistered tests</td>
-<td valign="top">We write down the question, the setting and the pass rule before the run. The preregistration file gets a SHA-256 hash, and every result file records it.</td>
-</tr>
-<tr>
-<td valign="top">Sealed held-out data</td>
-<td valign="top">A held-out cohort stays closed until the plan is frozen. It is then scored once. A guard in the code enforces the seal.</td>
-</tr>
-<tr>
-<td valign="top">Leakage control</td>
-<td valign="top">Features end at the prediction time. Every gain is compared with a time-shifted copy of the same features. If the copy gains too, the model learned the person and not the signal.</td>
-</tr>
-<tr>
-<td valign="top">Results that went against us</td>
-<td valign="top">We report nulls and retractions. Kahlus-V1 lost to simple baselines, and its README says so at the top.</td>
-</tr>
-</table>
+#### Preregistered tests
+We write down the question, the setting and the pass rule before the run. The preregistration file gets a SHA-256 hash, and every result file records it.
+
+#### Sealed held-out data
+A held-out cohort stays closed until the plan is frozen. It is then scored once. A guard in the code enforces the seal.
+
+#### Leakage control
+Features end at the prediction time. Every gain is compared with a time-shifted copy of the same features. If the copy gains too, the model learned the person and not the signal.
+
+#### Results that went against us
+We report nulls and retractions. Kahlus-V1 lost to simple baselines, and its README says so at the top.
 
 <br>
 
@@ -112,19 +96,22 @@ Position error stayed under 0.1 mm across 50 commanded bench points. A thermal a
 
 <table>
 <tr>
-<td width="110" valign="top">Accepted</td>
-<td valign="top"><b>Leakage-Controlled Evaluation of EEG Future-Window Forecasting in Held-Out Subjects</b><br>
-<sub>IEEE-EMBS IECBES 2026, Kuala Lumpur. Full conference paper, to be presented 9 to 11 December 2026. A. Patel, S. Zaidi, K. Garg.</sub></td>
+<td>
+<b>Leakage-Controlled Evaluation of EEG Future-Window Forecasting in Held-Out Subjects</b><br>
+<sub>Accepted. IEEE-EMBS IECBES 2026, Kuala Lumpur. Full conference paper, to be presented 9 to 11 December 2026. A. Patel, S. Zaidi, K. Garg.</sub>
+</td>
 </tr>
 <tr>
-<td valign="top">Accepted</td>
-<td valign="top"><b>A Geometry-Aware Robotic Dosimetry Platform for Autonomous Cold Plasma Wound Therapy With Multimodal Closed-Loop Sensing</b><br>
-<sub>ASME IMECE 2026, Vancouver. Technical presentation, abstract only. A. Patel, S. Zaidi.</sub></td>
+<td>
+<b>A Geometry-Aware Robotic Dosimetry Platform for Autonomous Cold Plasma Wound Therapy With Multimodal Closed-Loop Sensing</b><br>
+<sub>Accepted. ASME IMECE 2026, Vancouver. Technical presentation, abstract only. A. Patel, S. Zaidi.</sub>
+</td>
 </tr>
 <tr>
-<td valign="top">Presented</td>
-<td valign="top"><b>Development of a Six-Degree-of-Freedom Robotic Platform for Automated DBD Plasma Wound Treatment</b><br>
-<sub>IEEE ISEC 2026, Princeton, 14 March 2026. Two-page extended abstract and poster. A. Patel.</sub></td>
+<td>
+<b>Development of a Six-Degree-of-Freedom Robotic Platform for Automated DBD Plasma Wound Treatment</b><br>
+<sub>Presented. IEEE ISEC 2026, Princeton, 14 March 2026. Two-page extended abstract and poster. A. Patel.</sub>
+</td>
 </tr>
 </table>
 
