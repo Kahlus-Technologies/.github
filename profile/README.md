@@ -7,7 +7,7 @@
 
 <br>
 
-**Research in robotic cold plasma and closed-loop neurotechnology.**<br>
+**Research in robotic cold plasma and EEG forecasting.**<br>
 We publish our methods, our code and the results that went against us.
 
 <br>
@@ -19,30 +19,6 @@ We publish our methods, our code and the results that went against us.
 <br>
 
 ## Research
-
-<table>
-<tr>
-<td>
-<h3><a href="https://github.com/Kahlus-Technologies/Kahlus-V2">Kahlus-V2</a>: closed-loop sleep stimulation</h3>
-Closed-loop sound stimulation can deepen slow-wave sleep, but a click just before a brief wake-up (an arousal) can wake the sleeper. This work replays a slow-wave click trigger on recorded nights and asks whether it fires right before scored arousals.
-<br><br>
-<b>Result.</b> On 5,768 SHHS-1 nights, the trigger fires before an arousal <b>5.01 times</b> as often as at matched moments from the same night (95% interval 4.83 to 5.18). On 2,031 sealed MESA nights, scored once, the ratio is 3.79. A fake trigger shifted in time gives about 1.0 in both.
-<br><br>
-<b>Limit.</b> This is a replay. No sound was played, so the result says nothing about what clicks do to sleep. It measures timing.
-<br><br>
-<a href="https://github.com/Kahlus-Technologies/Kahlus-V2/blob/main/docs/prereg/k1-k7.md">Preregistration</a> &nbsp;·&nbsp; <a href="https://github.com/Kahlus-Technologies/Kahlus-V2/releases/tag/v0.2-k7">Release v0.2-k7</a>
-</td>
-</tr>
-</table>
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Kahlus-Technologies/.github/fm/kahlus-org-page/profile/assets/k7-trigger-timing-dark.png">
-  <img src="https://raw.githubusercontent.com/Kahlus-Technologies/.github/fm/kahlus-org-page/profile/assets/k7-trigger-timing-light.png" alt="Relative risk of a brief wake-up within 3 seconds of a click trigger: 5.01 in SHHS-1 and 3.79 in sealed MESA. A time-shifted fake trigger gives 0.99 and 1.00." width="760">
-</picture>
-
-</div>
 
 <table>
 <tr>
@@ -78,17 +54,17 @@ A robot arm holds a cold-plasma torch at a set distance over curved surfaces, fo
 
 ## How we work
 
-#### Preregistered tests
-We write down the question, the setting and the pass rule before the run. The preregistration file gets a SHA-256 hash, and every result file records it.
+#### Split rules first
+We fix the train, validation and test splits before preprocessing and before any model runs. Held-out subjects, sites and datasets stay out of training.
 
-#### Sealed held-out data
-A held-out cohort stays closed until the plan is frozen. It is then scored once. A guard in the code enforces the seal.
+#### Leakage audits
+We check for reused records, overlapping held-out groups, repeated windows and forbidden target metadata. These audits caught an error in our own first result.
 
-#### Leakage control
-Features end at the prediction time. Every gain is compared with a time-shifted copy of the same features. If the copy gains too, the model learned the person and not the signal.
+#### Strong baselines
+Every model is scored against simple baselines such as persistence and linear ridge regression. A model that does not beat them says so in its README.
 
 #### Results that went against us
-We report nulls and retractions. Kahlus-V1 lost to simple baselines, and its README says so at the top.
+We report nulls and retractions. Kahlus-V1 retracted its headline forecast score, and its README says so at the top.
 
 <br>
 
@@ -120,12 +96,6 @@ We report nulls and retractions. Kahlus-V1 lost to simple baselines, and its REA
 <br>
 
 ## Open source
-
-**Research software**
-
-- [kahlus-bench](https://github.com/Kahlus-Technologies/kahlus-bench): a leakage-sealed benchmark that scores neural-coupling estimators on synthetic systems with known directed information.
-- [neuroforecast](https://github.com/Kahlus-Technologies/neuroforecast): directed-information graphs for multi-organ neural coupling, with a certified detection floor for each edge.
-- [kahlus-research](https://github.com/Kahlus-Technologies/kahlus-research): deterministic replay of public biosignal recordings with injected faults. Actuation is disabled.
 
 **Agent skills**
 
